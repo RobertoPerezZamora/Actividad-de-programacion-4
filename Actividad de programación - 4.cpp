@@ -21,8 +21,17 @@ El programa debe salir cuando el usuario lo indique
 // Inicio de la función principal
 int main()
 {   
-    // Declarar la variable num
+    //Declarar la variable entero
+    int flag = 1;
+    
+    while(flag == 1)
+    {
+            // Declarar la variable num
     int num;
+    
+    // Solicitar un número al usuario
+    std::cout << "Ingresar un numero: ";
+    std::cin >> num;
 
     // Mostrar las opciones de ciclo
     std::cout << "Choose a loop type:\n";
@@ -30,18 +39,17 @@ int main()
     std::cout << "2. while loop\n";
     std::cout << "3. do-while loop\n";
     std :: cout << "4. Salir\n";
-    
+
     // Solicitar la opción al usuario
     int choice;
     // Guardar la opción en la variable choice
     std::cin >> choice;
 
-    // Solicitar un número al usuario
-    std::cout << "Ingresar un numero: ";
-    std::cin >> num;
+
 
     // Declarar las variables para la serie de Fibonacci
     int a = 0, b = 1, c, d = 4;
+
 
     switch (choice)
     {
@@ -88,9 +96,14 @@ int main()
             std::cout << "Opcion Invalida\n";
             break;
         
-        // Funcion para terminar el programa
     }
+    //Preguntar si desea continuar
+    std::cout << "Desea continuar? 1. Si 2. No\n";
+    std::cin >> flag;
+    }
+    
 
+    
     //Regresar 0
     return 0;
     //Fin del programa
